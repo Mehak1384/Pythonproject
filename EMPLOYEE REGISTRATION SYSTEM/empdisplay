@@ -1,4 +1,3 @@
-from employeedetails import details
 def emdisplay(Empname,Empage,Empposition,Empcode,Empexperince,Empqulation):
     print("==============================")
     print("EMPLOYEE DETAILS")
