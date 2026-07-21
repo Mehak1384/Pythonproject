@@ -1,6 +1,5 @@
 from empolyeedetails import details
 import json
-from datetime import datetime
 def save(Empname,Empage,Empposition,Empcode,Empexperince,Empqulation):
     data={
         "Employee name":Empname,
