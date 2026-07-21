@@ -1,0 +1,15 @@
+Start
+↓
+Menu
+↓
+Register Employee
+↓
+Display
+↓
+Calculate Salary
+↓
+Save JSON
+↓
+Load JSON
+↓
+Exit
