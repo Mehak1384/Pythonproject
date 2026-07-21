@@ -6,4 +6,3 @@ def details():
     Empexperince=float(input("Enter your Exp. in terms of years"))
     Empposition=input("Enter you position in Company")
     return Empname,Empage,Empposition,Empcode,Empexperince,Empqulation
-details()
