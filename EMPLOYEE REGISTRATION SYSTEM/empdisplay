@@ -1,1 +1,12 @@
-from emp
+from employeedetails import details
+def emdisplay(Empname,Empage,Empposition,Empcode,Empexperince,Empqulation):
+    print("==============================")
+    print("EMPLOYEE DETAILS")
+    print("print==============================")
+    print("Employee ID :",Empcode)
+    print("Name   :",Empname)
+    print("Age  :",Empage)
+    print("Exp.",Empexperince)
+    print("Department  :" ,Empposition)
+    print("Qualification",Empqulation)
+    
