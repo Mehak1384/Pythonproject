@@ -1,6 +1,6 @@
 from empolyeedetails import details
 from empdisplay import emdis
-from json import sa
+from jstst import save
 print("Welcome to Employee Registration System")
 count=0
 while True:
