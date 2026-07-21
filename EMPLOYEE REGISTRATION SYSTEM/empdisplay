@@ -1,4 +1,4 @@
-def emdisplay(Empname,Empage,Empposition,Empcode,Empexperince,Empqulation):
+def emdis(Empname,Empage,Empposition,Empcode,Empexperince,Empqulation):
     print("==============================")
     print("EMPLOYEE DETAILS")
     print("print==============================")
