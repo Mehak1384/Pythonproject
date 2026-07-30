@@ -1,4 +1,3 @@
-Create Database person_management_system;
 create table person(
     person_id SERIAL PRIMARY KEY,
     name VARCHAR(100),

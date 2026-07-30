@@ -9,3 +9,19 @@ connection = psycopg2.connect(
 )
 
 cursor = connection.cursor()
+def add_person(p):
+    cursor.execute(
+        """
+        INSERT INTO persons
+        (name, dob, address, phone_number, qualification)
+        VALUES (%s, %s, %s, %s, %s)
+        """,
+        (
+            p.name,
+            p.DOB,
+            p.Address,
+            p.PhoneNumber,
+            p.Qualification
+        )
+    )
+    connection.commit()
