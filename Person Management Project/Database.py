@@ -10,6 +10,21 @@ def create_connection_psql():
         password="411008@Pd",
         database="PMS")
         print("Connection with postgres sql sever is done")
+        print(type(connection))
+        cursor=connection.cursor()
+        query="""create table if not exists person_management_system(
+                person_id serial primary key,
+                person_name varchar(50) not null,
+                person_email varchar(50) not null,
+                person_phone varchar(50) not null,
+                person_address varchar(100) not null,
+                person_dob date not null,
+                person_male boolean not null,
+                person_education varchar(50) not null);"""
+        cursor.execute(query)
+        connection.commit()
+
+        print("Table created successfully in PostgreSQL")
     except OperationalError as e:
         print(f"The error coccured is '{e}'")
         return connection
@@ -19,5 +34,6 @@ conn=create_connection_psql()
 if conn:
     conn.close()
     print("Connection is closed")
+
         
         
