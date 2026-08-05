@@ -55,17 +55,37 @@ def create_connection_psql():
             cursor.execute(query_table,values)
             connection.commit()
             choice=input("Do you want to add more details in database:(yes/no):")
-            if choice=="No" or choice=="o":
+            if choice=="No" or choice=="no":
                 break
         print("Table created successfully in PostgreSQL")
+        return connection
     except OperationalError as e:
         print(f"The error coccured is '{e}'")
         return connection
     finally:
-        if connection:
-            connection.close()
-            print("Connection is closed")
+        print("Connection")
 conn=create_connection_psql()
+if conn:
+    curs=conn.cursor()
+    query_select="""select * from person_management_system;"""
+    curs.execute(query_select)
+    rows=curs.fetchall()
+    for i  in rows:
+        print(i)
+    print("Sorted Elements By their Name:")
+    query_sort="""select*from person_management_system order by person_name asc ;"""
+    curs.execute(query_sort)
+    r_ows=curs.fetchall()
+    for j in r_ows:
+        print(j)
+    print("Sorted Elements By their Gender and Date of Birth:")
+    query_sort="""select*from person_management_system order by person_male asc,person_dob asc;"""
+    curs.execute(query_sort)
+    r_ows=curs.fetchall()
+    for j in r_ows:
+            print(j)
+    conn.close()
+    
 
 
         
