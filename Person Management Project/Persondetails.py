@@ -1,9 +1,11 @@
 class person:
-    def __init__(self):
-          self.name=input("Enter your name:")
-          self.DOB=input("Enter your date of birth in form dd/mm/yyyy:")
-          self.Address=input("Enter your address:")
-          self.PhoneNumber=int(input("Enter your phone number:"))
-          self.Qualification=input("Enter your qualification in form like Graduate,Post Graduate,Doctorate,Diplomaclass person:")
+    def __init__(self,name,age,gender):
+        self.name=name
+        self.age=age
+        self.gender=gender
+p=person("mehak",20,"Female")
+print(p.name)
+print(p.age)
+print(p.person())
           
    

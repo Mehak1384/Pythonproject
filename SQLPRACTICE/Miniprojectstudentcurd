@@ -1,0 +1,2 @@
+"student_id","first_name","last_name","is_male","dob","email","phone","course","city"
+7,"Gunav","N/A",True,"2013-12-08","gunav@gmail.com","9090897889","Btech","Pataila"
