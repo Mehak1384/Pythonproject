@@ -96,3 +96,25 @@ for i in range(len(arr)):
 print(count,count_odd)
 for i in range(len(arr)):
     print(i,arr[i])
+"""Q6. Search for an Element 🔍
+Given:
+arr = [10, 25, 7, 40, 15]
+Take a number from the user and check whether that number exists in the array.
+Expected behavior:
+Enter number: 40
+40 found
+If the number doesn't exist:
+Enter number: 50
+50 not found
+Restrictions:
+Use a loop.
+Don't use in.
+Don't use index()."""
+arr = [10, 25, 7, 40, 15]
+n=int(input("Enter the number you want to search"))
+for i in range(len(arr)):
+    if (arr[i]==n):
+        print("Number found",n)
+        break  
+else:
+    print(n,"Number not found")
