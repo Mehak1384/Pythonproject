@@ -118,3 +118,63 @@ for i in range(len(arr)):
         break  
 else:
     print(n,"Number not found")
+"""Q7. Count Occurrences 
+Given:
+arr = [10, 20, 10, 30, 10, 40, 20]
+Take a number from the user and count how many times it appears in the array.
+Example:
+Enter number: 10
+10 occurs 3 times"""
+arr = [10, 20, 10, 30, 10, 40, 20]
+n=int(input("Enter the number from the user"))
+count=0
+for i in range(len(arr)):
+    if(arr[i]==n):
+        count+=1
+print(n,"occured",count,"times")
+"""Q8. Find the Position of an Element 🔍
+Given:
+arr = [15, 30, 45, 60, 75]
+Take a number from the user and find its index.
+Example:
+Enter number: 45
+45 found at index 2
+If it doesn't exist:
+Enter number: 50
+50 not found"""
+arr = [15, 30, 45, 60, 75]
+n=int(input("Enter the number you want to find"))
+for i in range(len(arr)):
+    if(arr[i]==n):
+        print(n,"found at index",i)
+        break
+else:
+    print(n,"not found")
+"""Q9. Find the Second Largest Element ⭐⭐
+
+Given:
+arr = [12, 45, 7, 89, 34]
+Find and print the second largest element.
+Expected output:
+
+Second largest = 45
+Restrictions:
+Don't use sort().
+Don't use max().
+Use loops.
+Try to solve it without creating another array."""
+arr = [12, 45, 7, 8900, 340]
+
+largest = arr[0]
+second_largest = arr[0]
+
+for i in range(1, len(arr)):
+
+    if arr[i] > largest:
+        second_largest = largest
+        largest = arr[i]
+
+    elif arr[i] > second_largest and arr[i] != largest:
+        second_largest = arr[i]
+
+print("Second largest =", second_largest)
